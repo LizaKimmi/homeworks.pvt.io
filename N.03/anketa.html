@@ -10,24 +10,24 @@
 var pension, genderUser;
 var checked = new RegExp(/[!@#$%^&*()<>,.+-~`?0123456789]/);
 
-	do {
-	  var surname = prompt("Укажите, пожалуйста, вашу фамилию", "Иванов"); //проверка фамилии
-	  }
-	while (surname.length < 2 || checked.test(surname));
+  do {
+    var surname = prompt("Укажите, пожалуйста, вашу фамилию", "Иванов"); //проверка фамилии
+  }
+  while (surname.length < 2 || checked.test(surname));
 
-	do {
-	  var  name = prompt("Укажете, пожалуйста, ваше имя", "Иван");  //проверка имени
-	  }
-	while (name.length < 2 || checked.test(name));
+  do {
+    var  name = prompt("Укажете, пожалуйста, ваше имя", "Иван");  //проверка имени
+  }
+  while (name.length < 2 || checked.test(name));
 
-	do {
-	  var  patronymic = prompt("Укажете, пожалуйста, ваше отчество", "Иванович");  //проверка отчества
-	  }
-	while (patronymic.length < 2 || checked.test(patronymic));
+  do {
+	var  patronymic = prompt("Укажете, пожалуйста, ваше отчество", "Иванович");  //проверка отчества
+  }
+  while (patronymic.length < 2 || checked.test(patronymic));
 
-	do {
-	  var age = Number(prompt("Укажете, пожалуйста, ваш возраст", " "));  //проверка возраста
-	  }
+  do {
+	var age = Number(prompt("Укажете, пожалуйста, ваш возраст", " "));  //проверка возраста
+  }
 	while ( age<=0 || age > 130  || !age);
 
 var gender = confirm("Вы мужчина?");
