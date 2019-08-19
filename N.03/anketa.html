@@ -21,22 +21,20 @@ var checked = new RegExp(/[!@#$%^&*()<>,.+-~`?0123456789]/);
   while (name.length < 2 || checked.test(name));
 
   do {
-	var  patronymic = prompt("Укажете, пожалуйста, ваше отчество", "Иванович");  //проверка отчества
+    var  patronymic = prompt("Укажете, пожалуйста, ваше отчество", "Иванович");  //проверка отчества
   }
   while (patronymic.length < 2 || checked.test(patronymic));
 
   do {
-	var age = Number(prompt("Укажете, пожалуйста, ваш возраст", " "));  //проверка возраста
+    var age = Number(prompt("Укажете, пожалуйста, ваш возраст", " "));  //проверка возраста
   }
-	while ( age<=0 || age > 130  || !age);
+    while ( age<=0 || age > 130  || !age);
 
 var gender = confirm("Вы мужчина?");
 
-	genderUser = gender ? "мужской" : "женский";
-
-	pension = ( (gender && age > 60) || ( !gender && age > 55) ) ? 'да' : 'нет' ;  
-
-	alert("ФИО: "+ surname + " " + name + " " + patronymic + '\n\r ' + "возраст, лет: " + age + '\n\r ' + "возраст, дней: "+ age * 365 + '\n\r ' + "через 5 лет вам будет: " + (age + 5) + '\n\r ' + "пол: " + genderUser + '\n\r ' + "пенсионный возраст: " + pension); 
+  genderUser = gender ? "мужской" : "женский";
+  pension = ( (gender && age > 60) || ( !gender && age > 55) ) ? 'да' : 'нет' ;  
+  alert("ФИО: "+ surname + " " + name + " " + patronymic + '\n\r ' + "возраст, лет: " + age + '\n\r ' + "возраст, дней: "+ age * 365 + '\n\r ' + "через 5 лет вам будет: " + (age + 5) + '\n\r ' + "пол: " + genderUser + '\n\r ' + "пенсионный возраст: " + pension); 
 </script> 
 </body> 
 </html>
