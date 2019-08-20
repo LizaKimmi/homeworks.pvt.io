@@ -9,29 +9,30 @@
 <script> 
 var pension, genderUser;
 var checked = new RegExp(/[!@#$%^&*()<>,.+-~`?0123456789]/);
-
+var surname = null;
   do {
-    var surname = prompt("Укажите, пожалуйста, вашу фамилию", "Иванов"); //проверка фамилии
+    surname = prompt("Укажите, пожалуйста, вашу фамилию", "Иванов"); //проверка фамилии
   }
-  while (surname.length < 2 || checked.test(surname));
-
+  while (surname == null || surname.length < 2 || checked.test(surname));
+	
+var name = null;
   do {
-    var  name = prompt("Укажете, пожалуйста, ваше имя", "Иван");  //проверка имени
+    name = prompt("Укажете, пожалуйста, ваше имя", "Иван");  //проверка имени
   }
-  while (name.length < 2 || checked.test(name));
-
+  while (name == null || name.length < 2 || checked.test(name));
+	
+var patronymic = null;
   do {
-    var  patronymic = prompt("Укажете, пожалуйста, ваше отчество", "Иванович");  //проверка отчества
+    patronymic = prompt("Укажете, пожалуйста, ваше отчество", "Иванович");  //проверка отчества
   }
-  while (patronymic.length < 2 || checked.test(patronymic));
-
+  while (patronymic == null || patronymic.length < 2 || checked.test(patronymic));
+	
+var age = null;  
   do {
-    var age = Number(prompt("Укажете, пожалуйста, ваш возраст", " "));  //проверка возраста
+    age = Number(prompt("Укажете, пожалуйста, ваш возраст", "18"));  //проверка возраста
   }
-    while ( age<=0 || age > 130  || !age);
-
+    while ( age<=0 || age > 145  || !age);
 var gender = confirm("Вы мужчина?");
-
   genderUser = gender ? "мужской" : "женский";
   pension = ( (gender && age > 60) || ( !gender && age > 55) ) ? 'да' : 'нет' ;  
   alert("ФИО: "+ surname + " " + name + " " + patronymic + '\n\r ' + "возраст, лет: " + age + '\n\r ' + "возраст, дней: "+ age * 365 + '\n\r ' + "через 5 лет вам будет: " + (age + 5) + '\n\r ' + "пол: " + genderUser + '\n\r ' + "пенсионный возраст: " + pension); 
