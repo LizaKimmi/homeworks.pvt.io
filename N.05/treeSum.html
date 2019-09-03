@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>treeSum</title>
+</head>
+<body>
+	
+<script>
+	"use strict";
+
+	var a=[ 5, 7, 
+		  [ 4, [2], 8, [1,3], 2 ], 
+		  [ 9, [] ], 
+		  1, 8
+		  ];
+
+	function treeSum(arr) {
+		let sum=0;
+		for (let i=0; i < arr.length; i++) {
+			let elem = arr[i];
+			if (Array.isArray(elem)) {
+				sum += treeSum(elem);
+			}
+			else {
+				sum += elem;
+			}
+		}
+		return sum;
+	}
+
+	console.log(treeSum(a));
+</script>
+
+
+<!-- <script>
+	"use strict";
+
+	var a=[ 5, 7, 
+		  [ 4, [2], 8, [1,3], 2 ], 
+		  [ 9, [] ], 
+		  1, 8
+		  ];
+
+	function treeSum(arr) {
+		let sum=0;
+		for (let i=0; i < arr.length; i++) {
+			let elem = arr[i];
+			if (typeof (elem) === Object()) {
+				sum += treeSum(elem);
+			}
+			else {
+				sum += elem;
+			}
+		}
+		return sum;
+	}
+
+	alert(treeSum(a));
+</script> -->
+</body>
+</html>
