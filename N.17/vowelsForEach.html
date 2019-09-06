@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vowels with .forEach</title>
+</head>
+<body>
+	<script>
+		"use strict"
+
+		var text=prompt("Введите любой текст", "текст").toLowerCase();
+        function vowelsForEach(str) {
+            let vowels = "аоиеёэыуюя";
+            let count = 0;
+            let check=str.split("");
+            check.forEach(char => {
+                if (vowels.indexOf(char)!==-1)
+                    ++count;
+            });
+            return count;
+        }
+
+        console.log(vowelsForEach(text));
+	</script>
+</body>
+</html>
