@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vowels .reduce</title>
+</head>
+<body>
+	<script>
+		"use strict"
+
+		var text=prompt("Введите любой текст", "текст").toLowerCase();
+        function vowelsReduce(str) {
+            let vowels = "аоиеёэыуюя";
+            let count = str.split("").reduce((a, char) => vowels.includes(char) ? a + 1 : a, 0);
+            return count;
+        }
+
+        console.log(vowelsReduce(text));
+	</script>
+</body>
+</body>
+</html>
