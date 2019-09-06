@@ -8,10 +8,10 @@
 	<script>
 	"use strict"
 
-	var text=prompt("Введите любой текст", "текст").toLowerCase();
+	var text=prompt("Введите любой текст", "текст");
         function vowelsReduce(str) {
             let vowels = "аоиеёэыуюя";
-            let count = str.split("").reduce((a, char) => vowels.includes(char) ? a + 1 : a, 0);
+            let count = str.toLowerCase().split("").reduce((a, char) => vowels.includes(char) ? a + 1 : a, 0);
             return count;
         }
 
