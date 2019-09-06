@@ -8,12 +8,12 @@
 	<script>
 	"use strict"
 
-	var text = prompt("Введите любой текст", "текст").toLowerCase();
+	var text = prompt("Введите любой текст", "текст");
 
 
         function vowelsFilter(str) {
             let vowels = "аоиеёэыуюя";;
-            let count = str.split("").filter(char => vowels.includes(char)).length;
+            let count = str.toLowerCase().split("").filter(char => vowels.includes(char)).length;
             return count;
         }
 
