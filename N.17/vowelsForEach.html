@@ -2,25 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Vowels with .forEach</title>
+	<title>Vowels .reduce</title>
 </head>
 <body>
 	<script>
-		"use strict"
-
-		var text=prompt("Введите любой текст", "текст").toLowerCase();
-        function vowelsForEach(str) {
+	"use strict"
+	var text=prompt("Введите любой текст", "текст");
+        function vowelsReduce(str) {
             let vowels = "аоиеёэыуюя";
-            let count = 0;
-            let check=str.split("");
-            check.forEach(char => {
-                if (vowels.indexOf(char)!==-1)
-                    ++count;
-            });
+            let count = str.toLowerCase().split("").reduce((a, char) => vowels.includes(char) ? a + 1 : a, 0);
             return count;
         }
 
-        console.log(vowelsForEach(text));
+        console.log(vowelsReduce(text));
 	</script>
+</body>
 </body>
 </html>
