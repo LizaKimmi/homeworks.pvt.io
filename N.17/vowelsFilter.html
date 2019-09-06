@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vowels with .filter</title>
+</head>
+<body>
+	<script>
+		"use strict"
+
+		var text = prompt("Введите любой текст", "текст").toLowerCase();
+
+
+        function vowelsFilter(str) {
+            let vowels = "аоиеёэыуюя";;
+            let count = str.split("").filter(char => vowels.includes(char)).length;
+            return count;
+        }
+
+        console.log(vowelsFilter(text));
+
+	</script>
+</body>
+</html>
