@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+</head>
+<body>
+	<input type="button" value="ввод информации о напитке" onclick="addValue()">
+	<br>
+	<input type="button" value="получение информации о напитке" onclick="getValue()">
+	<br>
+	<input type="button" value="удаление информации о напитке" onclick="deleteValue()">
+	<br>
+	<input type="button" value="перечень всех напитков" onclick="getKey()">
+
+	<script>
+		"use strict"
+
+		function HashStorage() {
+			this.storage={};
+
+			this.addValue=function(key, value ){
+				this.storage[key]=value;
+			}
+
+			this.getValue=function(key) {
+				return this.storage[key];
+			}
+
+			this.deleteValue=function(key) {
+				if (key in this.storage) {
+					delete this.storage[key];
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+
+			this.getKey=function() {
+				return Object.keys(this.storage);
+			}
+
+		}
+
+		var drinkStorage=new HashStorage;
+
+		function addValue() {
+			var drinkName=prompt("Введите название напитка", "название");
+			var alco=confirm("Напиток алкогольный?");
+			if (alco) {
+				alco="да";
+			}
+			else {
+				alco="нет";
+			}
+
+			var recipe=prompt("Введите рецепт напитка", "ингредиенты");
+			drinkStorage.addValue(drinkName,{a:alco, r:recipe});
+		}
+
+		function  getValue() {
+			var drinkName=prompt("Введите название напитка", "название");
+			var info=drinkStorage.getValue(drinkName);
+			if (info) {
+				alert("Название напитока: "+ drinkName +"\n\r " + "Алкогольный: " + info.a + '\n\r '+ "Рецепт приготовления: " + info.r);
+			}
+			else {
+				alert("Напиток не найден!");
+			}
+		}
+
+		function deleteValue(){
+			var drinkName=prompt("Введите название напитка", "название");
+			var del=drinkStorage.deleteValue(drinkName);
+			if (del) {
+				alert("Информация о напитке " + "'" + drinkName + "'" + " удалена!");
+			}
+			else {
+				alert("Напиток " + "'" + drinkName + "'" + " в списке отсутствует!")
+			}
+		}
+
+		function getKey(){
+			alert(drinkStorage.getKey());
+		}
+		
+	</script>
+
+</body>
+</html>
