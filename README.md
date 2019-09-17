@@ -16,6 +16,8 @@
  [домашка N.17.3](https://lizakimmi.github.io/homeworks.pvt.io/N.17/vowelsReduce.html
  "с использованием reduce")
  
-  [домашка N.10](https://lizakimmi.github.io/homeworks.pvt.io/N.10/mood.html "рандомный вывод цветов")
+ [домашка N.10](https://lizakimmi.github.io/homeworks.pvt.io/N.10/mood.html "рандомный вывод цветов")
  
+ [домашка N.13](https://lizakimmi.github.io/homeworks.pvt.io/N.13/DRINKS_HASH_FUNC.html "хранение информации о напитках(функция-конструктор)")
+  
 
