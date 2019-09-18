@@ -19,5 +19,8 @@
  [домашка N.10](https://lizakimmi.github.io/homeworks.pvt.io/N.10/mood.html "рандомный вывод цветов")
  
  [домашка N.13](https://lizakimmi.github.io/homeworks.pvt.io/N.13/DRINKS_HASH_FUNC.html "хранение информации о напитках(функция-конструктор)")
+ 
+  [домашка N.14](https://lizakimmi.github.io/homeworks.pvt.io/N.14/DRINKS_HASH_CLASS.htm "хранение информации о напитках(ключевым словом class)")
+ 
   
 
