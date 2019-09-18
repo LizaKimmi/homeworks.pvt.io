@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DRINKS_HASH_CLASS</title>
+</head>
+<body>
+	<input type="button" value="ввод информации о напитке" onclick="addValue()">
+	<br>
+	<input type="button" value="получение информации о напитке" onclick="getValue()">
+	<br>
+	<input type="button" value="удаление информации о напитке" onclick="deleteValue()">
+	<br>
+	<input type="button" value="перечень всех напитков" onclick="getKey()">
+
+	<script>
+		"use strict"
+
+		class HashStorage {
+			constructor () {
+				this.storage={};
+			}
+
+			addValue (key,value) {
+				this.storage[key]=value;
+			}
+
+			getValue (key) {
+				return this.storage[key];
+			}
+
+			deleteValue(key) {
+				if (key in this.storage) {
+					delete this.storage[key];
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+
+			getKey() {
+				return Object.keys(this.storage);
+			}
+		}
+
+		var drinkStorage=new HashStorage;
+
+		function addValue() {
+			var drinkName=prompt("Введите название напитка", "название");
+			var alco=confirm("Напиток алкогольный?");
+			if (alco) {
+				alco="да";
+			}
+			else {
+				alco="нет";
+			}
+
+			var recipe=prompt("Введите рецепт напитка", "ингредиенты");
+			drinkStorage.addValue(drinkName,{a:alco, r:recipe});
+		}
+
+		function  getValue() {
+			var drinkName=prompt("Введите название напитка", "название");
+			var info=drinkStorage.getValue(drinkName);
+			if (info) {
+				alert("Название напитока: "+ drinkName +"\n\r " + "Алкогольный: " + info.a + '\n\r '+ "Рецепт приготовления: " + info.r);
+			}
+			else {
+				alert("Напиток не найден!");
+			}
+		}
+
+		function deleteValue(){
+			var drinkName=prompt("Введите название напитка", "название");
+			var del=drinkStorage.deleteValue(drinkName);
+			if (del) {
+				alert("Информация о напитке " + "'" + drinkName + "'" + " удалена!");
+			}
+			else {
+				alert("Напиток " + "'" + drinkName + "'" + " в списке отсутствует!")
+			}
+		}
+
+		function getKey(){
+			var drinks=drinkStorage.getKey();
+			if (drinks.length > 0) {
+			alert(drinks);}
+			else {
+				alert("Список пуст!")
+			}
+		}
+	</script>
+</body>
+</html>
