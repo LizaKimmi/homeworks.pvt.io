@@ -11,24 +11,23 @@
 
 <script>
     "use strict";
-    // находим корни квадратного уравнения
-    // возвращает массив корней
+
     function squareRoots(a,b,c) {
-        var d=b*b-4*a*c; // дискриминант
+        var d=b*b-4*a*c;
         if (a == 0) {
             if (b != 0) {
-                return [ b/-c ];
+                return [ c/-b ];
             }
             else if (c == 0) {
                 return [ b ];
             }
             else {
-                return ['нет решений'];
+                return [];
             }
         }
         else {
         if ( d<0 )
-            return []; // нет корней
+            return []; 
         
         if ( d==0 )
             return [ -b/(2*a) ]; // один корень
