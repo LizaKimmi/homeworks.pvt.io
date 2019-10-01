@@ -23,6 +23,10 @@
   [домашка N.14](https://lizakimmi.github.io/homeworks.pvt.io/N.14/DRINKS_HASH_CLASS.html "хранение информации о напитках(ключевым словом class)")
   
   [домашка N.20](https://lizakimmi.github.io/homeworks.pvt.io/N.20/ROOTS_correct.html "корни квадратного уравнения")
+  
+  [домашка N.23](https://lizakimmi.github.io/homeworks.pvt.io/N.23/dyn_form.html "создние форм")
+  
+  
 
  
   
