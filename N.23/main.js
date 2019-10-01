@@ -103,4 +103,3 @@ function createForm(formDef, formElem) {
         formElem.appendChild(space);
 	}
 }
-

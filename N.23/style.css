@@ -5,10 +5,10 @@ body {
 form {
     margin-top: 15px;
     padding: 5px;
+
 }
 
-label {
-    display: inline-block;
+label {display: inline-block;
     width: 200px;
     margin-bottom: 15px;
 }
