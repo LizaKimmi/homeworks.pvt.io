@@ -28,18 +28,6 @@ function createForm(formDef, formElem) {
 	for (var i=0; i<formDef.length; i++) {
 		var elemDef=formDef[i];
 		switch (elemDef.kind) {
-			case "longtext" : 
-			case "number" :
-			case "shorttext" :
-			var label=document.createElement("label");
-			label.textContent=elemDef.label;
-			var input=document.createElement("input");
-			input.type="text";
-			input.name=elemDef.name;
-			formElem.appendChild(label);
-			formElem.appendChild(input);
-			break;
-
 			case "memo" :
 			var label=document.createElement("label");
 			label.textContent=elemDef.label;
@@ -101,8 +89,18 @@ function createForm(formDef, formElem) {
             
 			break;
 
-		}
+			default :
+			var label=document.createElement("label");
+			label.textContent=elemDef.label;
+			var input=document.createElement("input");
+			input.type="text";
+			input.name=elemDef.name;
+			formElem.appendChild(label);
+			formElem.appendChild(input);
+			}
+
 		var space = document.createElement("br");
         formElem.appendChild(space);
 	}
 }
+
