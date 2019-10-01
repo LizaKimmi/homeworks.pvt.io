@@ -1,0 +1,108 @@
+"use strict"
+
+var formDef1=
+[
+  {label:'Название сайта:',kind:'longtext',name:'sitename'},
+  {label:'URL сайта:',kind:'longtext',name:'siteurl'},
+  {label:'Посетителей в сутки:',kind:'number',name:'visitors'},
+  {label:'E-mail для связи:',kind:'shorttext',name:'email'},
+  {label:'Рубрика каталога:',kind:'combo',name:'division',
+    variants:[{text:'здоровье',value:1},{text:'домашний уют',value:2},{text:'бытовая техника',value:3}]},
+  {label:'Размещение:',kind:'radio',name:'payment',
+    variants:[{text:'бесплатное',value:1},{text:'платное',value:2},{text:'VIP',value:3}]},
+  {label:'Разрешить отзывы:',kind:'check',name:'votes'},
+  {label:'Описание сайта:',kind:'memo',name:'description'},
+  {label:'Опубликовать:',kind:'submit'},
+];
+
+var formDef2=
+[
+  {label:'Фамилия:',kind:'longtext',name:'lastname'},
+  {label:'Имя:',kind:'longtext',name:'firstname'},
+  {label:'Отчество:',kind:'longtext',name:'secondname'},
+  {label:'Возраст:',kind:'number',name:'age'},
+  {label:'Зарегистрироваться:',kind:'submit'},
+];
+
+function createForm(formDef, formElem) {
+	for (var i=0; i<formDef.length; i++) {
+		var elemDef=formDef[i];
+		switch (elemDef.kind) {
+			case "longtext" : 
+			case "number" :
+			case "shorttext" :
+			var label=document.createElement("label");
+			label.textContent=elemDef.label;
+			var input=document.createElement("input");
+			input.type="text";
+			input.name=elemDef.name;
+			formElem.appendChild(label);
+			formElem.appendChild(input);
+			break;
+
+			case "memo" :
+			var label=document.createElement("label");
+			label.textContent=elemDef.label;
+			var textarea=document.createElement("textarea");
+			textarea.name=elemDef.name;
+			formElem.appendChild(label);
+			formElem.appendChild(textarea);
+			break;
+
+			case "submit" :
+			var submit=document.createElement("input");
+			submit.type="submit";
+			submit.value=elemDef.label;
+			formElem.appendChild(submit);
+			break;
+
+			case "check" :
+			var label=document.createElement("label");
+			label.textContent=elemDef.label;
+			var check=document.createElement("input");
+			check.type="checkbox";
+			check.name=elemDef.name;
+			check.checked="checked";
+			formElem.appendChild(label);
+			formElem.appendChild(check);
+			break;
+
+			case "combo" :
+			var label=document.createElement("label");
+			label.textContent=elemDef.label;
+			var select=document.createElement("select");
+            select.name=elemDef.name;
+            elemDef.variants.map(function (subelem){
+            	var option=document.createElement("option");
+           		option.value=subelem.value;
+            	option.text=subelem.text;
+            	if(option.value == 3) {
+            		option.selected="true";
+            	}
+            	select.appendChild(option);
+            });
+            formElem.appendChild(label);
+			formElem.appendChild(select);
+            break;
+
+            case "radio" :
+            var label=document.createElement("label");
+			label.textContent=elemDef.label;
+			formElem.appendChild(label);
+			elemDef.variants.map(function (subelem){
+            	var radio = document.createElement("input");
+           		radio.value = subelem.value;
+            	var span = document.createElement("span");
+                span.innerText = subelem.text;
+            	radio.type="radio";
+            	formElem.appendChild(radio);
+            	formElem.appendChild(span);
+            });
+            
+			break;
+
+		}
+		var space = document.createElement("br");
+        formElem.appendChild(space);
+	}
+}
