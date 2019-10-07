@@ -28,7 +28,7 @@
   
   [домашка N.27](https://lizakimmi.github.io/homeworks.pvt.io/N.27/index.html "валидация формы")
   
-  [домашка N.27](https://lizakimmi.github.io/homeworks.pvt.io/N.30/DRAGNDROP.html " перетаскивание мышью изображений")
+  [домашка N.30](https://lizakimmi.github.io/homeworks.pvt.io/N.30/DRAGNDROP.html " перетаскивание мышью изображений")
 
    
   
