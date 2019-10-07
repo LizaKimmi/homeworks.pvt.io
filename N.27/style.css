@@ -1,0 +1,28 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+form {
+    margin-top: 15px;
+    padding: 5px;
+
+}
+
+label {
+	display: inline-block;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 50%;
+    min-height: 50px;
+}
+
+input {
+	margin-bottom: 10px;
+}
+
+.invalid { 
+	border-color: red; 
+}
