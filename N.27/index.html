@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>VALID_FORM</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+	<p>Для внесения вашего сайта в каталог, заполните форму:</p>
+	<form method="POST" action="http://fe.it-academy.by/TestForm.php" name="info" novalidate>
+		<label for="author">Разработчики:</label>
+		<input type="text" name="author">
+		<span id="errorAuthor"></span><br>
+
+		<label for="title">Название сайта:</label>
+		<input type="text" name="title">
+		<span id="errorTitle"></span><br>
+
+
+		<label for="urlTitle">URL сайта:</label>
+		<input type="text" name="urlTitle">
+		<span id="errorUrlTitle"></span><br>
+
+
+		<label for="startdate">Дата запуска сайта:</label>
+		<input type="date" name="startdate">
+		<span id="errorStartdate"></span><br>
+
+
+		<label for="persons">Посетителей в сутки:</label>
+		<input type="text" name="persons">
+		<span id="errorPersons"></span><br>
+
+		<label for="input">E-mail для связи:</label>
+		<input type="email" name="email">
+		<span id="errorEmail"></span><br>
+
+
+		<label for="rubric">Рубрика каталога:</label>
+		<select name="rubric">
+  			<option value=1>здоровье</option>
+  			<option value=2>домашний уют</option>
+  			<option value=3 selected>бытовая техника</option>
+  		</select>
+  		<span id="errorRubric"></span>
+  		<br>
+
+
+  		<label>Размещение:</label><span id="errorVar"></span>
+  		<div id="variants">
+  		<input type="radio" name="publicVar" value="free" id="radioFirst"><span>бесплатное</span>
+  		<input type="radio" name="publicVar" value="pay"><span>платное</span>
+  		<input type="radio" name="publicVar" value="vip"><span>VIP</span>
+     	</div>
+
+  		<label for="comments">Разрешить отзывы:</label>
+  		<input type="checkbox" name="comments">
+  		<span id="errorComment"></span><br>
+
+  		<label for="article">Описание сайта:</label>
+  		<br>
+  		<textarea name="article" cols="30" rows="10"></textarea><span id="errorArticle"></span><br>
+  		
+
+  		<input type="submit" name="submit" value="Опубликовать">
+
+	</form>
+
+
+	<script src="main.js"></script>
+</body>
+</html>
