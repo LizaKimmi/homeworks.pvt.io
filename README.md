@@ -32,6 +32,10 @@
   
   [домашка N.33](https://lizakimmi.github.io/homeworks.pvt.io/N.33/clock_dom.html "проект часы")
   
+  [домашка N.37](https://lizakimmi.github.io/homeworks.pvt.io/N.37/clock_svg.html "проект svg")
+  
+  
+  
 
 
    
