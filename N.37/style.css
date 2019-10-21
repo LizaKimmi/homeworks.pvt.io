@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #c5e3f0;
+}
+
+#wrap {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: inline-flex;
+}
+/* #clock {
+	border-radius: 50%;
+	position:relative;
+	background-color: #F7F7F7;
+	border: 2px solid #181818;
+	box-shadow: 0 0 15px rgba(0,0,0,0.75) inset;
+}
+
+#hourArrow,
+#secondArrow,
+#minuteArrow {
+	background-color: black;
+	border-radius: 8px;
+	opacity: 0.6;
+	transform-origin: 50% 100%;
+
+} */
