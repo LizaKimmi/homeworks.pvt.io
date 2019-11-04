@@ -36,6 +36,9 @@
   
   [домашка N.40](https://lizakimmi.github.io/homeworks.pvt.io/N.40/index.html "проект часы на canvas")
  
+  [домашка N.43](https://lizakimmi.github.io/homeworks.pvt.io/N.43/index.html "игра теннис DOM")
+  
+ 
   
   
   
