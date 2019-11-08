@@ -38,6 +38,8 @@
  
   [домашка N.43](https://lizakimmi.github.io/homeworks.pvt.io/N.43/index.html "игра теннис DOM")
   
+  [домашка N.53](https://lizakimmi.github.io/homeworks.pvt.io/N.53/index.html "DRINKS_LOC_STORAGE")
+  
  
   
   
